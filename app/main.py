@@ -6,8 +6,8 @@ class Dictionary:
         self.__bucket = bucket
         self.__table = [[] for _ in range(bucket)]
 
-    def hash_function(self, key: int) -> int:
-        return key % self.__bucket
+    def hash_function(self, key: Any) -> int:
+        return hash(key) % self.__bucket
 
     def __setitem__(self, key: int, value: Any) -> None:
         index = self.hash_function(key)
