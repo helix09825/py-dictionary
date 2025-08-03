@@ -2,7 +2,7 @@ from typing import Any
 
 
 class Dictionary:
-    def __init__(self, bucket: Any) -> None:
+    def __init__(self, bucket: int = 8) -> None:
         self.__bucket = bucket
         self.__table = [[] for _ in range(bucket)]
 
