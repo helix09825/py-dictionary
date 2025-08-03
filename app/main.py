@@ -13,7 +13,7 @@ class Dictionary:
         index = self.hash_function(key)
         for idx, pair in enumerate(self.__table[index]):
             if pair[0] == key:
-                self.__table[index][idx][1] = value
+                self.__table[index].append([key, value])
                 return
 
         self.__table[index].append([key, value])
